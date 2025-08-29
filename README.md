@@ -5,10 +5,10 @@
 ```bash
 git clone https://github.com/ulisses-cruz/pdf_extract.git
 cd pdf_extract
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-
+export PYTHONPATH=$PYTHONPATH:.
 ```
 
 
@@ -30,7 +30,6 @@ migration.
 
 ```bash
 python ./src/infrastructure/sqlite/migrations.py
-
 ```
 
 ## Serve pdf file
@@ -40,7 +39,7 @@ for testing.
 
 ```bash 
 cd assets
-python3 -m http.server
+python -m http.server
 ```
 
 After running the server you will be able to access the pdf in [this url](http://localhost:8000/0809090-86.2024.8.12.0021.pdf).
